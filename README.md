@@ -33,11 +33,16 @@ The base URL for the API is:
 
 **https://virtserver.swaggerhub.com/KENOSAGIE88/HngTask2/1.0.0**
 
-Authentication
-Login
+### Authentication
+
+**Login**
+
 Endpoint: /api/v1/auth/login
+
 Method: POST
+
 Summary: Creates a new user
+
 Request Body:
 
 ```
@@ -55,10 +60,14 @@ Responses:
 400: Bad Request
 ```
 
-Google Login
+**Google Login**
+
 Endpoint: /api/v1/auth/google/login
+
 Method: POST
+
 Summary: Handle Google Login Callback
+
 Request Body:
 
 ```
@@ -75,20 +84,28 @@ Responses:
 400: Invalid authorization code.
 
 ```
-Logout
+**Logout**
+
 Endpoint: /api/v1/auth/logout
+
 Method: POST
+
 Summary: User logout
+
 
 Responses:
 ```
 204: User logged out successfully
 
 ```
-Request Magic Link
+**Request Magic Link**
+
 Endpoint: /api/v1/auth/magic-link/login
+
 Method: POST
+
 Summary: Request Magic Link
+
 
 Request Body:
 ```
@@ -104,10 +121,14 @@ Responses:
 400: Bad Request (e.g., invalid email)
 
 ```
-Change Password
+**Change Password**
+
 Endpoint: /api/v1/auth/change-password
+
 Method: POST
+
 Summary: Change User Password
+
 Request Body:
 ```
 json
@@ -144,10 +165,14 @@ Responses:
 404: User not found
 
 ```
-Confirm Password Reset
+**Confirm Password Reset**
+
 Endpoint: /api/v1/password/reset/confirm
+
 Method: POST
+
 Summary: Confirm password reset
+
 Request Body:
 ```
 
@@ -165,11 +190,15 @@ Responses:
 400: Bad request
 
 ```
-Superadmin
-List Users
+### Superadmin
+**List Users**
+
 Endpoint: /api/admin/users
+
 Method: GET
+
 Summary: List all users
+
 Responses:
 ```
 200: Query Successful
