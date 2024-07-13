@@ -195,9 +195,12 @@ Responses:
 
 Endpoint: /api/admin/users
 
+
 Method: GET
 
+
 Summary: List all users
+
 
 Responses:
 ```
@@ -222,10 +225,14 @@ Responses:
   ]
 }
 ```
-List Organizations
+**List Organizations**
+
 Endpoint: /api/v1/admin/organizations
+
 Method: GET
+
 Summary: Admin List organizations
+
 Responses:
 ```
 200: A list of organizations
@@ -237,10 +244,14 @@ Responses:
 ]
 ```
 
-List Payments
+**List Payments**
+
 Endpoint: /api/v1/admin/payments
+
 Method: GET
+
 Summary: Admin Payments
+
 Responses:
 ```
 200: A list of payments
@@ -254,10 +265,14 @@ Responses:
 ]
 ```
 
-Get Activity Log
+**Get Activity Log**
+
 Endpoint: /api/v1/admin/activity-log
+
 Method: GET
+
 Summary: Admin Get activity log
+
 Responses:
 ```
 200: Activity log
@@ -270,11 +285,16 @@ Responses:
 
 
 ```
-Messaging
+### Messaging
+
 Send Email
+
 Endpoint: /api/v1/email/send
+
 Method: POST
+
 Summary: Send email
+
 Request Body:
 ```
 json
@@ -290,11 +310,16 @@ Responses:
 200: Email sent successfully
 500: Server error
 ```
-Payments
-Stripe Payment Processing
+### Payments
+
+**Stripe Payment Processing**
+
 Endpoint: /api/v1/payments/stripe
+
 Method: POST
+
 Summary: Stripe payment processing
+
 Request Body:
 ```
 json
@@ -312,10 +337,14 @@ Responses:
 400: Bad request
 
 ```
-Flutterwave Payment Processing
+**Flutterwave Payment Processing**
+
 Endpoint: /api/v1/payments/flutterwave
+
 Method: POST
+
 Summary: Flutterwave payment processing
+
 Request Body:
 ```
 json
@@ -333,10 +362,14 @@ Responses:
 400: Bad request
 ```
 
-LemonSqueezy Payment Processing
+**LemonSqueezy Payment Processing**
+
 Endpoint: /api/v1/payments/lemonsqueezy
+
 Method: POST
+
 Summary: LemonSqueezy payment processing
+
 Request Body:
 ```
 json
@@ -353,18 +386,26 @@ Responses:
 400: Bad request
 
 ```
-List All Payments
+**List All Payments**
+
 Endpoint: /api/v1/payments
+
 Method: GET
+
 Summary: List all payments
+
 Responses:
 ```
 200: List of payments
 ```
-Get Payment Details
+**Get Payment Details**
+
 Endpoint: /api/v1/payments/{id}
+
 Method: GET
+
 Summary: Get payment details
+
 Responses:
 ```
 200: Payment details
@@ -378,11 +419,16 @@ Responses:
 ]
 404: Payment not found
 ```
-Organization
-List All Organizations
+### Organization
+
+**List All Organizations**
+
 Endpoint: /api/v1/organizations
+
 Method: GET
+
 Summary: List all organizations
+
 Responses:
 ```
 200: A list of organizations
@@ -393,10 +439,14 @@ Responses:
   }
 ]
 ```
-Create Organization
+**Create Organization**
+
 Endpoint: /api/v1/organizations
+
 Method: POST
+
 Summary: Create organization
+
 Request Body:
 ```
 json
@@ -410,10 +460,14 @@ Responses:
 201: Organization created successfully
 400: Bad request
 ```
-Get Organization Details
+**Get Organization Details**
+
 Endpoint: /api/v1/organizations/{id}
+
 Method: GET
+
 Summary: Get organization details
+
 Responses:
 ```
 200: Organization details
@@ -423,10 +477,14 @@ Responses:
   }
 404: Organization not found
 ```
-Update Organization
+**Update Organization**
+
 Endpoint: /api/v1/organizations/{id}
+
 Method: PUT
+
 Summary: Update organization
+
 Request Body:
 ```
 json
@@ -440,21 +498,29 @@ Responses:
 200: Organization updated successfully
 404: Organization not found
 ```
-Delete Organization
+**Delete Organization**
+
 
 Endpoint: /api/v1/organizations/{id}
+
 Method: DELETE
+
 Summary: Delete organization
+
 Responses:
 ```
 204: Organization deleted successfully
 403: Forbidden
 404: Organization not found
 ```
-Add User to Organization
+**Add User to Organization**
+
 Endpoint: /api/v1/organizations/{id}/add-user
+
 Method: POST
+
 Summary: Add user to organization
+
 Request Body:
 ```
 json
@@ -469,10 +535,14 @@ Responses:
 404: Organization or user not found
 
 ```
-List User Organizations
+**List User Organizations**
+
 Endpoint: /api/v1/users/{id}/organizations
+
 Method: GET
+
 Summary: Get a list of all user organizations
+
 Responses:
 ```
 200: A list of user organizations
@@ -485,10 +555,14 @@ Responses:
 404: User not found
 
 ```
-Get User Organization Details
+**Get User Organization Details**
+
 Endpoint: /api/v1/users/{userId}/organizations/{orgId}
+
 Method: GET
+
 Summary: Get a specific user organization
+
 Responses:
 ```
 200: Organization details
@@ -501,21 +575,30 @@ Responses:
 404: Organization or user not found
 
 ```
-Delete User from Organization
+**Delete User from Organization**
+
 Endpoint: /api/v1/users/{userId}/organizations/{orgId}
+
 Method: DELETE
+
 Summary: Delete a user from an organization
+
 Responses:
 ```
 204: User removed from organization
 404: Organization or user not found
 
 ```
-Settings
-Get General Settings
+### Settings
+
+**Get General Settings**
+
 Endpoint: /api/v1/settings
+
 Method: GET
+
 Summary: Get general settings
+
 Responses:
 ```
 200: General settings for logged-in user
@@ -526,10 +609,15 @@ Responses:
 ```
 
 
-Profile
-GET 
+### Profile
+
+**GET Profile settings**
+
+
 /api/v1/profile
+
 Get profile settings for logged in user
+
 
 Responses
 ```
@@ -549,9 +637,15 @@ Responses
   }
 }
 ```
+
+**Update profile settings**
+
 PUT 
+
 /api/v1/profile
+
 Update profile settings for logged in user
+
 
 Request Body
 ```
@@ -568,8 +662,13 @@ Responses
 }
 ```
 
+
+**Upload picture on profile**
+
 POST 
+
 /api/v1/profile/avatar
+
 Upload profile picture for logged in user
 
 Request Body
